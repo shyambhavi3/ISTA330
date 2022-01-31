@@ -10,4 +10,20 @@ output: 'hello'
 
 var suffleString = function(input, shuffleIndices) {
 
+  var string="";
+
+  for(i in input){
+    for(j in shuffleIndices){
+    
+      if(i==shuffleIndices[j]){
+        string+=input[j];
+      }
+    }
+  }
+
+
+  return string;
+
+
+
 };
