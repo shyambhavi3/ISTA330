@@ -10,7 +10,14 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-   var maxNum = Math.max(cookies);
+   var maxNum=0
+
+   for(i in cookies){
+     if (cookies[i]>maxNum){
+       maxNum=cookies[i];
+     }
+   }
+   
    var toBeAdded =0;
    i=0;
 
@@ -18,6 +25,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
      toBeAdded+= maxNum-cookies[i];
      i++;
    }
+
 
    return extraCookies===toBeAdded;
 
