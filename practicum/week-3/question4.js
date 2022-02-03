@@ -14,4 +14,9 @@ Example:
 
 var hasDuplicates = function(input) {
 
+    var inputSet = new Set(input);
+    
+     
+    return !(inputSet.size===input.length);
+
 };

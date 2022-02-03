@@ -10,6 +10,19 @@ Example: input: [-12,3,-1,5,-2,1,-7]
           */
 
  var largestSubarray = function(input) {
+         var maxArray =input[0];
+         for(var i =0; i <input.length;i++){
+                var curr=0;
+                for(var j=i; j <input.length;j++){
+                        curr+=input[j];
+                        if(curr>maxArray){
+                                maxArray=curr;
+                        }
+                        
+                }
+         }
+
+         return maxArray;
      
     
  };

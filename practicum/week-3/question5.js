@@ -18,6 +18,40 @@ output: true
 
 var isMonotonic = function(input) {
 
+    for(var i =0; i<input.length-1;i++){
+        if(input[i]<input[i+1]){
+            return checkIncreasing(input)
+
+        }
+        if(input[i]>input[i+1]){
+            return checkDecreasing(input);
+
+        }
+    }
+
 };
 
-console.log('hi');
+function checkDecreasing(list){
+    for(var i=0; i<list.length-1;i++){
+        if(list[i]<list[i+1]){
+            return false;
+        }
+    }
+
+    return true;
+
+}
+
+function checkIncreasing(list){
+
+    for(var i=0; i<list.length-1;i++){
+        if(list[i]>list[i+1]){
+            return false;
+        }
+    }
+
+    return true;
+
+
+}
+
