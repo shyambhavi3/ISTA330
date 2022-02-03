@@ -11,9 +11,11 @@ is at least twice as much as every other number
 
 var largestNumberIsAtLeastTwice = function(input) {
         var maxNum=findMax(input);
+        
        
         for(var i =0;i<input.length;i++){
-                if(input[i]*2 < maxNum){
+                
+                if(input[i]*2 > maxNum && input[i]!=maxNum){
                         return false;
                 }
 
@@ -26,7 +28,7 @@ var largestNumberIsAtLeastTwice = function(input) {
 function findMax(list){
         var num=list[0]
 
-        for(var i=0;i++;i<list.length){
+        for(var i=0;i<list.length;i++){
                 if (list[i]>num){
                         num=list[i];
                 }
