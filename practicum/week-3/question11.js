@@ -14,5 +14,13 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
+    var i=0
 
+    input1.forEach(element=>{
+        var count = input2.findIndex(index=>{
+            return Math.abs(element-index)<=d
+        })
+        if(count==-1) i++
+    })
+    return i
 };
