@@ -8,6 +8,11 @@ F(n) = F(n - 1) + F(n - 2), for n > 1.
 Given n, calculate F(n).
 */
 
-var F = function(n) {
+var F = function F(n){
+    if(n<=1){
+        return n;
+    }
 
-};
+    return F(n-1) +F(n-2);
+}
+
